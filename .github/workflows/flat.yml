@@ -14,13 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v5
       - name: Setup deno
-        uses: denoland/setup-deno@main
+        uses: denoland/setup-deno@2
         with:
           deno-version: v2.x
       - name: Fetch data
-        uses: githubocto/flat@v2
+        uses: githubocto/flat@v3
         with:
           http_url: https://extract-wagtail-gh-pulse.deno.dev
           downloaded_filename: wagtail-metrics.json
