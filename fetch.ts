@@ -108,7 +108,7 @@ async function handleResponseHTML(overviewStats: OverviewStatistics) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wagtail Statistics - <%= it.range_label ?? '(unknown)' %></title>
-    <style>
+  <style>
     body {
       font-family: system-ui, sans-serif;
       background: #f8f9fa;
@@ -179,6 +179,47 @@ async function handleResponseHTML(overviewStats: OverviewStatistics) {
       }
       table {
         font-size: 0.95em;
+      }
+    }
+    /* Dark mode styles */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #181a1b;
+        color: #e6e6e6;
+      }
+      h1 {
+        color: #e6e6e6;
+      }
+      table {
+        background: #232527;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      }
+      th {
+        background: #23272b;
+        color: #e6e6e6;
+        border-bottom: 1px solid #33373a;
+      }
+      td {
+        color: #e6e6e6;
+        border-bottom: 1px solid #33373a;
+      }
+      button {
+        background: #339af0;
+        color: #181a1b;
+      }
+      button:hover,
+      button:focus {
+        background: #1971c2;
+        color: #fff;
+        box-shadow: 0 0 0 3px #339af0;
+      }
+      a {
+        color: #91caff;
+      }
+      a:hover,
+      a:focus {
+        color: #339af0;
+        box-shadow: 0 0 0 3px #339af0;
       }
     }
   </style>
