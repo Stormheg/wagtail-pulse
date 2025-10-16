@@ -1,0 +1,5 @@
+{
+    "tasks": {
+        "build": "echo This project is too simple to need a build step! Deno.dev thinks we should have one, so here it is."
+    }
+}
