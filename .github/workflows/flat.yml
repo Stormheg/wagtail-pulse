@@ -16,7 +16,7 @@ jobs:
       - name: Check out repo
         uses: actions/checkout@v5
       - name: Setup deno
-        uses: denoland/setup-deno@2
+        uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
       - name: Fetch data
