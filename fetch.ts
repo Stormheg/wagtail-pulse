@@ -93,7 +93,7 @@ async function retrieveOverviewData() {
       $("span[data-content='Issues']").next()
     );
     aggregatedData.total_contributors = justNumber(
-      $("a[href$='/graphs/contributors'] .Counter").first()
+      $("a[href$='/graphs/contributors']").find(".Counter")
     );
   }
 
